@@ -3,7 +3,7 @@
     <q-layout view="lHh LpR lFf" style="height: 300px">
       <q-header class="bg-cyan-8">
         <q-toolbar>
-          <a href="/" style="text-decoration: none;  color: inherit;">
+          <a href="/dashboard" style="text-decoration: none;  color: inherit;">
             <q-toolbar-title>Impact Forge</q-toolbar-title>
           </a>
           <q-btn flat rounded @click="drawer = !drawer" round dense icon="menu" style="margin-left: auto;"/>
@@ -97,6 +97,15 @@ export default {
     return {
       drawer: ref(false)
     }
+  },
+  beforeRouteEnter(to, from, next) {
+    const isLoggedIn = true; // Replace with your authentication check
+
+    if (isLoggedIn) {
+      next(); // Allow access if logged in
+    } else {
+      next('/login'); // Redirect to login if not
+    }
   }
-}
+};
 </script>

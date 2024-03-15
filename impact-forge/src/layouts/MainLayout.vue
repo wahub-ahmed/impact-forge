@@ -63,7 +63,7 @@
         <q-img class="absolute-top" src="https://cdn.quasar.dev/img/material.png" style="height: 150px">
           <div class="absolute-bottom bg-transparent">
             <q-avatar size="100px" class="q-md-sm">
-              <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+              <img src="https://img.freepik.com/free-photo/worldface-british-guy-white-background_53876-14467.jpg?t=st=1710477496~exp=1710481096~hmac=8fcd4d3b865f0d156891451af7dd6744b338c79359a131e4f3dad36d6b4c4cab&w=740">
             </q-avatar>
           </div>
         </q-img>

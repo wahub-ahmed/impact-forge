@@ -1,39 +1,41 @@
 <template>
   <div>
-    <div class="header">
-      <div class="flex justify-between items-center">
+    <div class="header clickable flex items-center">
         <div class="logo">
           CrowdWatts
         </div>
         <div class="nav-items flex space-x-4">
-          <a href="#overview">Overview</a>
-          <a href="#key-features">Key Features</a>
-          <a href="#impact">Impact</a>
-          <a href="#es">ES</a>
-          <q-btn flat label="Login" />
-          <q-btn flat label="Signup →" />
+          <a @click="smoothScrollTo('#overview')">Overview</a>
+          <a @click="smoothScrollTo('#key-features')">Key Features</a>
+          <a @click="smoothScrollTo('#impact')">Impact</a>
+          <router-link to="/login" ><q-btn flat label="Login" /></router-link>
         </div>
-      </div>
     </div>
     <div class="content q-pa-md">
-      <section id="overview" class="hero">
-        <p class="text-h1">“The greatest threat to our planet is the belief that someone else will save it”</p>
-        <p class="text-subheading">--Robert Swan</p>
-      
-      <div class="description">
-        <p>Who are we?</p>
-        <p>
-          Government takes too long. We speed it up
-        </p>
-        <q-btn label="Join CrowdWatt Community" color="secondary" />
+      <div class="hero">
+        <p class="text-h1">“The greatest threat to our planet is the belief that someone else will save it”<br>--Robert Swan</p>
       </div>
+      <section id="overview">
+        <h4>
+          Who are we?
+        </h4>
+        <p>CrowdWatt is a community investment platform that gives cities in different stages of urbanization the ability to lead the push towards access to energy and renewable energies. We’re democratizing access to energy, focusing on vulnerable/large impact communities, and unifying cities.</p>
+        <q-btn label="Join CrowdWatt Community" color="secondary" />
     </section>
-      
-    <section id="key-features" class="description">
-       </section>
 
-      <section id="impact" class="description">
-        </section>
+      <section id="key-features">
+        <h2>
+          Why do We Care?
+        </h2>
+        <p>The problem of unsustainable infrastructure and energy inefficiency persists to affect communities’ well being. In the Latin America area,  17 million people lack access to electricity and 75 million lack access to clean fuels for cooking. The lack of investment, regional disparities, and inadequate planning results in ineffective allocation of resources, leading to the problem remaining unresolved. The infrastructure gap increases risks for public health, hinders access to education and economic opportunities, and exacerbates social conflicts and environmental degradation.</p>
+        
+      </section>
+      <section id="impact">
+        <h2>
+          What is the Expected Outcome in 3 Years?
+        </h2>
+        <p></p>
+      </section>
     </div>
   </div>
 </template>
@@ -55,7 +57,8 @@ export default {
 <style scoped>
 .header {
   background-color: #f5f5f5;
-  padding: 16px;
+  padding: 12px;
+  cursor: pointer;
 }
 
 .logo {
@@ -65,6 +68,7 @@ export default {
 
 .nav-items {
   font-size: 16px;
+  margin-bottom: 0px;
 }
 
 .content {
@@ -83,21 +87,7 @@ export default {
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 10px;
-}
-
-.text-subheading {
-  font-size: 16px;
-  color: #828282;
-}
-
-.description {
-  text-align: center;
-}
-
-.description p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  text-align: left;
 }
 
 @media (max-width: 768px) {

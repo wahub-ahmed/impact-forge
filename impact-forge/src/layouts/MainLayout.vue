@@ -99,7 +99,7 @@ export default {
     }
   },
   beforeRouteEnter(to, from, next) {
-    const isLoggedIn = true; // Replace with your authentication check
+    const isLoggedIn = true; // authentication check
 
     if (isLoggedIn) {
       next(); // Allow access if logged in

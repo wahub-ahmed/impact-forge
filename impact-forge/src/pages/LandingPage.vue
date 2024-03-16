@@ -17,15 +17,17 @@
         <p class="text-h1">“The greatest threat to our planet is<br>the belief that someone else will save it”<br>--Robert Swan</p>
       </div>
       <section id="overview" class="flex md:flex-row flex-col">
-        <div class="text-section">
-          <h4>
-            Who are we?
-          </h4>
-          <p>CrowdWatt is a community investment platform that gives cities in different stages of urbanization the ability to lead the push towards access to energy and renewable energies. We’re democratizing access to energy, focusing on vulnerable/large impact communities, and unifying cities.</p>
-          <q-btn label="Join CrowdWatt Community" color="secondary" />
-        </div>
-        <div class="image-section">
-          </div>
+        <div class="overview-content"> <div class="text-and-button">
+      <h4>
+        Who are we?
+      </h4>
+      <p>CrowdWatt is a community investment platform that gives cities in different stages of urbanization the ability to lead the push towards access to energy and renewable energies. We’re democratizing access to energy, focusing on vulnerable/large impact communities, and unifying cities.</p>
+      <router-link to="/signup" ><q-btn label="Join CrowdWatt Community" color="secondary" /></router-link>
+      </div>
+    <div class="image-section">
+      <img src="./homepage.png" width="400px" height="300px" />
+    </div>
+  </div>
       </section>
 
       <section id="key-features">
@@ -103,7 +105,7 @@ export default {
 .content {
   display: flex;
   flex-direction: column;
-  padding: 40px; /* Add padding to create margin from the sides */
+  padding: 40px; 
 }
 
 .hero {
@@ -120,9 +122,22 @@ export default {
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-  }
+#overview {
+  flex-direction: row; /* Keep overview as a row */
+}
+
+.overview-content {
+  display: flex;     /* Use flexbox to distribute space */
+  flex: 1;           /* Allow the overview-content to expand to fill the #overview section */
+}
+
+.text-and-button,
+.image-section {
+  flex: 1;           /* Both sections get equal space */
+  margin: 0 10px;    /* Add some spacing between the sections */
+}
+
+.image-section {
+  text-align: center; /* Keep the image centered */
 }
 </style>

@@ -14,7 +14,7 @@
 
       <q-card-actions align="right">
         <q-btn flat label="Cancel" />
-        <q-btn color="primary" label="Sign Up" @click="signup" />
+        <q-btn color="secondary" label="Sign Up" @click="signup" />
       </q-card-actions>
     </q-card>
   </div>

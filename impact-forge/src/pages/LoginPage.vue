@@ -12,7 +12,7 @@
 
       <q-card-actions align="right">
         <q-btn flat label="Cancel" />
-        <q-btn color="primary" label="Login" @click="login" />
+        <q-btn color="secondary" label="Login" @click="login" />
       </q-card-actions>
 
       <q-card-section class="text-center text-caption">

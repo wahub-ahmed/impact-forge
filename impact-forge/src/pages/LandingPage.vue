@@ -6,27 +6,34 @@
           CrowdWatts
         </div>
         <div class="nav-items flex space-x-4">
-          <a href="#">Overview</a>
-          <a href="#">Key Features</a>
-          <a href="#">Impact</a>
-          <a href="#">EN</a>
+          <a href="#overview">Overview</a>
+          <a href="#key-features">Key Features</a>
+          <a href="#impact">Impact</a>
+          <a href="#es">ES</a>
           <q-btn flat label="Login" />
           <q-btn flat label="Signup →" />
         </div>
       </div>
     </div>
     <div class="content q-pa-md">
-      <div class="hero">
-        <p class="text-h1">“The Greatest Threat to Our Planet is the Belief that Someone Else Will Save It.”</p>
+      <section id="overview" class="hero">
+        <p class="text-h1">“The greatest threat to our planet is the belief that someone else will save it”</p>
         <p class="text-subheading">--Robert Swan</p>
-      </div>
+      
       <div class="description">
         <p>Who are we?</p>
         <p>
-          [Replace with your company description here. It can be a short story or a creative mission statement that describes what CrowdWatt does and its goals.]
+          Government takes too long. We speed it up
         </p>
-        <q-btn label="Join CrowdWatt Community" color="primary" />
+        <q-btn label="Join CrowdWatt Community" color="secondary" />
       </div>
+    </section>
+      
+    <section id="key-features" class="description">
+       </section>
+
+      <section id="impact" class="description">
+        </section>
     </div>
   </div>
 </template>
@@ -34,6 +41,14 @@
 <script>
 export default {
   name: 'LandingPage',
+  methods: {
+    smoothScrollTo(target) {
+      const element = document.querySelector(target);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
 }
 </script>
 
